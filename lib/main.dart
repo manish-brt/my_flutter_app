@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/paint/MyPaint.dart';
 import 'package:my_flutter_app/randomwords/random_words.dart';
 import 'package:my_flutter_app/unitconverter/category_route.dart';
 import 'package:flutter/foundation.dart';
@@ -471,8 +472,13 @@ class _MyHomePageState2 extends State<MyHomePage>
                       );
                     },
                   ),
-                  SizedBox(height: 50,),
-                  Text(sliderVal.toString(), style: TextStyle(fontSize: 26, color: Colors.blueAccent),),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text(
+                    sliderVal.toString(),
+                    style: TextStyle(fontSize: 26, color: Colors.blueAccent),
+                  ),
                 ],
               ),
             ),
@@ -492,8 +498,17 @@ class _MyHomePageState2 extends State<MyHomePage>
               decoration: BoxDecoration(color: Colors.blue[400]),
             ),
             ListTile(
+              title: Text('Paint',
+                  style: TextStyle(letterSpacing: 1, fontSize: 16)),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyPaint()));
+              },
+            ),
+            ListTile(
               title: Text('Pokemon',
-                  style: TextStyle(letterSpacing: 1, fontSize: 18)),
+                  style: TextStyle(letterSpacing: 1, fontSize: 16)),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
@@ -502,7 +517,7 @@ class _MyHomePageState2 extends State<MyHomePage>
             ),
             ListTile(
               title: Text('Friendly Chat',
-                  style: TextStyle(letterSpacing: 1, fontSize: 18)),
+                  style: TextStyle(letterSpacing: 1, fontSize: 16)),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
@@ -511,7 +526,7 @@ class _MyHomePageState2 extends State<MyHomePage>
             ),
             ListTile(
               title: Text('Unit Converter',
-                  style: TextStyle(letterSpacing: 1, fontSize: 18)),
+                  style: TextStyle(letterSpacing: 1, fontSize: 16)),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -522,7 +537,7 @@ class _MyHomePageState2 extends State<MyHomePage>
             ),
             ListTile(
               title: Text('Startup Name Generator',
-                  style: TextStyle(letterSpacing: 1, fontSize: 18)),
+                  style: TextStyle(letterSpacing: 1, fontSize: 16)),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
@@ -531,7 +546,7 @@ class _MyHomePageState2 extends State<MyHomePage>
             ),
             ListTile(
               title: Text('Youtube Sample',
-                  style: TextStyle(letterSpacing: 2, fontSize: 18)),
+                  style: TextStyle(letterSpacing: 1, fontSize: 16)),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context,
@@ -541,7 +556,7 @@ class _MyHomePageState2 extends State<MyHomePage>
             ListTile(
               title: Text(
                 'Date Picker',
-                style: TextStyle(letterSpacing: 1, fontSize: 18),
+                style: TextStyle(letterSpacing: 1, fontSize: 16),
               ),
               onTap: () {
                 Navigator.pop(context);
@@ -554,7 +569,7 @@ class _MyHomePageState2 extends State<MyHomePage>
             ),
             ListTile(
               title: Text('Time Picker',
-                  style: TextStyle(letterSpacing: 2, fontSize: 18)),
+                  style: TextStyle(letterSpacing: 2, fontSize: 16)),
               onTap: () {
                 Navigator.pop(context);
                 showTimePicker(context: context, initialTime: TimeOfDay.now());
